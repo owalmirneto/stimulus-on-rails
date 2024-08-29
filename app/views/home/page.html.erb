@@ -1,14 +1,33 @@
 <h1>Stimulus on Rails</h1>
-<h2>Qual é o meu endereço?</h2>
+<h2 data-controller="hello">Qual é o meu endereço?</h2>
 
-<%= form_tag nil, method: "GET" do %>
-  <%= select_tag :format, options_for_select(["html", "json"], "html") %>
-  <%= text_field_tag :zip_code, nil, placeholder: "Digite seu CEP" %>
+<div data-controller="companies">
+  <table>
+    <tr>
+      <td><b>Nome</b></td>
+      <td><b>#</b></td>
+    </tr>
+    <tr>
+      <td>ITAU UNIBANCO S.A.:</td>
+      <td>60.701.190/0001-04</td>
+      <td><%= render("companies/button", cnpj: "60701190000104") %></td>
+    </tr>
+    <tr>
+      <td>APPLE COMPUTER BRASIL LTDA:</td>
+      <td>00.623.904/0001-73</td>
+      <td><%= render("companies/button", cnpj: "00623904000173") %></td>
+    </tr>
+    <tr>
+      <td>Coca-Cola FEMSA:</td>
+      <td>61.186.888/0001-93</td>
+      <td><%= render("companies/button", cnpj: "61186888000193") %></td>
+    </tr>
+    <tr>
+      <td>CERVEJARIA HEINEKEN LTDA:</td>
+      <td>90.581.604/0001-61</td>
+      <td><%= render("companies/button", cnpj: "90581604000161") %></td>
+    </tr>
+  </table>
 
-  <%= submit_tag "Buscar endereço" %>
-<% end %>
-
-<div id="loading">
-  <%#= image_tag("loading.gif", width: 50) %>
+  <%= render("companies/company", company: {}) %>
 </div>
-<div id="response"></div>

@@ -1,0 +1,13 @@
+<%= text_field_tag :company_name, company[:companyName], placeholder: "Razão Social", data: {companies_target: "companyName"} %>
+<%= text_field_tag :trading_name, company[:tradingName], placeholder: "Nome Fantasia", data: {companies_target: "tradingName"} %>
+<%= text_field_tag :phone_number, company[:phoneNumber], placeholder: "Telefone", data: {companies_target: "phoneNumber"} %>
+<%= text_field_tag :email, company[:email], placeholder: "E-mail", data: {companies_target: "email"} %>
+<%= text_field_tag :zip_code, company[:zipCode], placeholder: "CEP", data: {companies_target: "zipCode"} %>
+
+<br>
+
+<%= text_field_tag :street_name, company[:streetName], placeholder: "Logradouro", data: {companies_target: "streetName"} %>
+<%= text_field_tag :address_number, company[:addressNumber], placeholder: "Número", data: {companies_target: "addressNumber"} %>
+<%= text_field_tag :neighborhood, company[:neighborhood], placeholder: "Bairro", data: {companies_target: "neighborhood"} %>
+<%= text_field_tag :city, company[:city], placeholder: "Cidade", data: {companies_target: "city"} %>
+<%= text_field_tag :state, company[:state], placeholder: "Estado", data: {companies_target: "state"} %>

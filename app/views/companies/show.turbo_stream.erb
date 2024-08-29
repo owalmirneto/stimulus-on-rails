@@ -1,0 +1,3 @@
+<%= turbo_stream.replace(:companies) do %>
+  <%= render("companies/company", company: @company) %>
+<% end %>
